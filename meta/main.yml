@@ -1,0 +1,18 @@
+---
+galaxy_info:
+  author: Samuel Loh Yin Kang
+  description: RVM
+  license: license (MIT)
+  min_ansible_version: 2.0
+  platforms:
+  - name: Centos
+    versions:
+    - all
+  - name: Fedora
+    versions:
+    - all
+  galaxy_tags:
+    - ruby
+    - rvm
+
+dependencies: []
