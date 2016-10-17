@@ -1,3 +1,5 @@
+tmp_prefix: /tmp/rvm
 ruby_version: 2.3.0
+
 
 
