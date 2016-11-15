@@ -7,6 +7,8 @@
     - "{{ tmp_prefix }}"
 
 - shell: gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+  args:
+    executable: /bin/bash
 
 - name: Downloading RVM
   get_url:
@@ -15,9 +17,13 @@
 
 - name: Installing RVM
   shell: "cat {{ tmp_prefix }}/rvm-installer.sh | bash -s stable"
+  args:
+    executable: /bin/bash
 
 - name: Installing Ruby
   shell: source /etc/profile.d/rvm.sh && rvm install {{ ruby_version }}
+  args:
+    executable: /bin/bash
 
 - file:
     path: "{{ tmp_prefix }}"
