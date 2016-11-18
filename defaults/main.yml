@@ -1,4 +1,4 @@
-tmp_prefix: /tmp/rvm
+tmp_prefix: "{{ ansible_env.HOME }}/tmp/rvm"
 ruby_version: 2.3.0
 
 
